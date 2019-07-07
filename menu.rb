@@ -28,13 +28,13 @@ def test
   wag2 = CargoWagon.new
   qwe2.add_wagon(wag2)
 
-  novo.show_trains do |train|
+  novo.each_train do |train|
     puts "Number: #{train.number}, Type: #{train.class.name}, Wagons: #{train.wagons.size}"
   end
-  qwe1.show_wagons do |wagon|
+  qwe1.each_wagon do |wagon|
     puts "Number: #{wagon.number}, Type: #{wagon.class.name}, Seat: #{wagon.seat}"
   end
-  qwe2.show_wagons do |wagon|
+  qwe2.each_wagon do |wagon|
     puts "Number: #{wagon.number}, Type: #{wagon.class.name}, Volume: #{wagon.volume}"
   end
 end

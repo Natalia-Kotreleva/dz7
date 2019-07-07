@@ -54,13 +54,13 @@ class Train
     "#{@route.stations[@route.stations.index(@station) - 1].name_station}, #{@station.name_station}, #{@route.stations[@route.stations.index(@station) + 1].name_station}"
   end
 
-  def show_wagons
+  def each_wagon
     @wagons.each do |wagon|
       yield wagon if block_given?
     end
   end
 
-  def Train.find(number)
+  def self.find(number)
     @@trains.each { |train|
       return train if train.number == number
     }

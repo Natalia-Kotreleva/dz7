@@ -26,14 +26,14 @@ class Station
   def trains_type
     cargo_trains = @trains.count { |train| train.type == :cargo }
     passenger_trains = @trains.count { |train| train.type == :passenger }
-  "cargo: #{cargo_trains}, passenger: #{passenger_trains}"
+    "cargo: #{cargo_trains}, passenger: #{passenger_trains}"
   end
 
-  def Station.all
+  def self.all
     @@stations
   end
 
-  def show_trains
+  def each_train
     @trains.each do |train|
       yield train if block_given?
     end

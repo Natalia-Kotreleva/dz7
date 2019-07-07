@@ -14,12 +14,8 @@ class CargoWagon
     @volume -= cargo_volume if @volume >= cargo_volume
   end
 
-  def free_volume
-    return @volume
-  end
-
   def reserved_volume
     reserved_volume = 100 - @volume
-    return reserved_volume
   end
 end
+
