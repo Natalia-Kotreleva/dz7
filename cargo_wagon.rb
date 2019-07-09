@@ -15,7 +15,7 @@ class CargoWagon
   end
 
   def reserved_volume
-    reserved_volume = 100 - @volume
+    100 - @volume
   end
 end
 

@@ -3,7 +3,7 @@ load 'name_company.rb'
 class PassengerWagon
   include NameCompany
   
-  attr_reader :seat, :number#, :reserved_seat
+  attr_reader :seat, :number
 
   def initialize
     @seat = 100
@@ -15,7 +15,7 @@ class PassengerWagon
   end
 
   def reserved_seat
-    reserved_seat = 100 - @seat
+    100 - @seat
   end
 end
 
